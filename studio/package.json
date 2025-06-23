@@ -10,6 +10,9 @@
     "prebuild": "npm run extract-types",
     "build": "sanity build",
     "deploy": "sanity deploy",
+    "deploy-graphql": "sanity graphql deploy",
+    "test": "jest",
+    "test:schemas": "jest schemas.test.js",
     "extract-types": "sanity schema extract --enforce-required-fields",
     "upgrade": "npm install sanity@latest @sanity/vision@latest",
     "typegen": "sanity schema extract && sanity typegen generate --generates=../nextjs-app/sanity.types.ts"
@@ -46,7 +49,9 @@
     "@sanity/eslint-config-studio": "^4.0.0",
     "@types/react": "^18.3.12",
     "@types/validator": "^13.15.0",
+    "babel-jest": "^30.0.2",
     "eslint": "^8.6.0",
+    "jest": "^30.0.2",
     "prettier": "^3.3.3",
     "typescript": "^5.6.3"
   },

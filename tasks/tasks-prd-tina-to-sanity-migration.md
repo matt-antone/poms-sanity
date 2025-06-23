@@ -49,7 +49,7 @@
     - [x] 1.7.2 Identify variables to migrate (Algolia, Supabase) vs deprecate (Cloudinary, Tina)
     - [x] 1.7.3 Create environment variable mapping documentation (migration/env-mapping.md)
     - [x] 1.7.4 Determine required Sanity configuration variables
-  - [ ] 1.8 Set up target site environment variables for Sanity integration
+  - [x] 1.8 Set up target site environment variables for Sanity integration
     - [x] 1.8.1 Create nextjs-app/.env.local with migrated variables
     - [ ] 1.8.2 Configure Sanity project ID, dataset, and API tokens (read + write)
     - [ ] 1.8.3 Set NEXT_PUBLIC_SANITY_API_VERSION to "2024-10-28"

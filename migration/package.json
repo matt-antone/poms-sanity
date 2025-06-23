@@ -1,0 +1,17 @@
+{
+  "name": "migration-tests",
+  "version": "1.0.0",
+  "description": "Tests for migration infrastructure",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^30.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/__tests__/**/*.test.js"
+    ]
+  }
+}
