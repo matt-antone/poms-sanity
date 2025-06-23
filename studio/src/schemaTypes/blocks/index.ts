@@ -11,4 +11,6 @@ export * from './posts-list-block';
 export * from './slideshow-block';
 export * from './stats-block';
 export * from './testimonial-block';
+export * from './vimeo-block';
+export * from './arrow-image-block';
 export * from './youtube-block';

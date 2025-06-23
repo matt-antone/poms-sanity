@@ -1,5 +1,8 @@
+// @ts-ignore: Sanity types are not available
 import { DocumentTextIcon } from '@sanity/icons'
+// @ts-ignore: date-fns types are not available
 import { format, parseISO } from 'date-fns'
+// @ts-ignore: Sanity types are not available
 import { defineField, defineType } from 'sanity'
 
 /**
@@ -17,7 +20,13 @@ export const post = defineType({
       name: 'title',
       title: 'Title',
       type: 'string',
-      validation: (rule) => rule.required(),
+      validation: (rule: any) => rule.required(),
+    }),
+    defineField({
+      name: 'metaTitle',
+      title: 'Meta Title',
+      type: 'string',
+      description: 'Title for SEO and meta tags. If not provided, the main title will be used.',
     }),
     defineField({
       name: 'slug',
@@ -27,24 +36,32 @@ export const post = defineType({
       options: {
         source: 'title',
         maxLength: 96,
-        isUnique: (value, context) => context.defaultIsUnique(value, context),
+        isUnique: (value: any, context: any) => context.defaultIsUnique(value, context),
       },
-      validation: (rule) => rule.required(),
+      validation: (rule: any) => rule.required(),
     }),
     defineField({
-      name: 'content',
-      title: 'Content',
-      type: 'blockContent',
+      name: 'publishedAt',
+      title: 'Published At',
+      type: 'datetime',
+      initialValue: () => new Date().toISOString(),
+      description: 'When the post was published',
     }),
     defineField({
-      name: 'description',
-      title: 'Description',
-      type: 'blockContent',
-      description: 'The description of the post. This will be used as the description of the post in the search engine results and post lists.',
+      name: 'expirationDate',
+      title: 'Expiration Date',
+      type: 'datetime',
+      description: 'When the post expires (optional)',
     }),
     defineField({
-      name: 'coverImage',
-      title: 'Cover Image',
+      name: 'excerpt',
+      title: 'Excerpt',
+      type: 'text',
+      description: 'A brief description of the post for previews and SEO',
+    }),
+    defineField({
+      name: 'mainImage',
+      title: 'Main Image',
       type: 'image',
       options: {
         hotspot: true,
@@ -58,10 +75,10 @@ export const post = defineType({
           type: 'string',
           title: 'Alternative text',
           description: 'Important for SEO and accessibility.',
-          validation: (rule) => {
+          validation: (rule: any) => {
             // Custom validation to ensure alt text is provided if the image is present. https://www.sanity.io/docs/validation
-            return rule.custom((alt, context) => {
-              if ((context.document?.coverImage as any)?.asset?._ref && !alt) {
+            return rule.custom((alt: any, context: any) => {
+              if ((context.document?.mainImage as any)?.asset?._ref && !alt) {
                 return 'Required'
               }
               return true
@@ -69,19 +86,46 @@ export const post = defineType({
           },
         },
       ],
-      validation: (rule) => rule.required(),
     }),
     defineField({
-      name: 'date',
-      title: 'Date',
-      type: 'datetime',
-      initialValue: () => new Date().toISOString(),
+      name: 'floatImage',
+      title: 'Float Image',
+      type: 'image',
+      options: {
+        hotspot: true,
+        aiAssist: {
+          imageDescriptionField: 'alt',
+        },
+      },
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative text',
+          description: 'Important for SEO and accessibility.',
+        },
+      ],
+      description: 'Optional floating image overlay',
+    }),
+    defineField({
+      name: 'category',
+      title: 'Category',
+      type: 'reference',
+      to: [{ type: 'category' }],
+      description: 'Category for the post',
     }),
     defineField({
       name: 'author',
       title: 'Author',
       type: 'reference',
       to: [{ type: 'person' }],
+      description: 'Author of the post',
+    }),
+    defineField({
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent',
+      description: 'The main content of the post',
     }),
   ],
   // List preview configuration. https://www.sanity.io/docs/previews-list-views
@@ -90,13 +134,13 @@ export const post = defineType({
       title: 'title',
       authorFirstName: 'author.firstName',
       authorLastName: 'author.lastName',
-      date: 'date',
-      media: 'coverImage',
+      publishedAt: 'publishedAt',
+      media: 'mainImage',
     },
-    prepare({ title, media, authorFirstName, authorLastName, date }) {
+    prepare({ title, media, authorFirstName, authorLastName, publishedAt }: any) {
       const subtitles = [
         authorFirstName && authorLastName && `by ${authorFirstName} ${authorLastName}`,
-        date && `on ${format(parseISO(date), 'LLL d, yyyy')}`,
+        publishedAt && `on ${format(parseISO(publishedAt), 'LLL d, yyyy')}`,
       ].filter(Boolean)
 
       return { title, media, subtitle: subtitles.join(' ') }

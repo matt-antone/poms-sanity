@@ -1,6 +1,7 @@
 import { person } from './documents/person'
 import { page } from './documents/page'
 import { post } from './documents/post'
+import { category } from './documents/category'
 import { settings } from './singletons/settings'
 import { link } from './objects/link'
 import { blockContent } from './objects/blockContent'
@@ -21,6 +22,7 @@ export const schemaTypes = [
   page,
   person,
   post,
+  category,
   // Objects
   // blockContent,
   // customImage,

@@ -1,0 +1,4 @@
+# This file will contain all Sanity documents in newline-delimited JSON format
+# Each line will be a valid JSON object representing a Sanity document
+# Format: {"_id":"...","_type":"...","_createdAt":"...","_updatedAt":"...","_rev":"...",...}
+# This file will be populated by the migration scripts 
