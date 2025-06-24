@@ -110,10 +110,10 @@ export function SanityImage({
   if (fill) {
     return (
       <div className={cn("relative w-full h-full", className)} style={style}>
-        <Image {...imageProps} className={objectFitClass} />
+        <Image {...imageProps} alt={alt} className={objectFitClass} />
       </div>
     );
   } else {
-    return <Image {...imageProps} className={cn(className, objectFitClass)} />;
+    return <Image {...imageProps} alt={alt} className={cn(className, objectFitClass)} />;
   }
 }

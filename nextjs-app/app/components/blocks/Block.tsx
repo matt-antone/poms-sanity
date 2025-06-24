@@ -1,12 +1,12 @@
 "use client"
 
 import * as React from 'react';
-import { motion } from "motion/react"
+import { motion } from "framer-motion"
 
 import type {
   AdvancedListBlock as AdvancedListBlockType,
   ContentBlock as ContentBlockType,
-  HeroBlock as HeroBlockType,
+
   CarouselBlock as CarouselBlockType,
   SlideshowBlock as SlideshowBlockType,
   BentoBlock as BentoBlockType,
@@ -69,7 +69,7 @@ interface IBlockProps {
   CarouselBlockType['options'] |
   ContentBlockType['options'] |
   GalleryBlockType['options'] |
-  HeroBlockType['options'] |
+
   LogoParadeBlockType['options'] |
   SlideshowBlockType['options'] |
   TestimonialBlockType['options'] |

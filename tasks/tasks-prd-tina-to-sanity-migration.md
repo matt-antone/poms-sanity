@@ -73,25 +73,25 @@
   - [x] 3.6 Generate data.ndjson with all documents in proper Sanity format
   - [x] 3.7 Generate assets.json with complete asset metadata
   - [x] 3.8 Validate all document references and relationships are preserved
-- [ ] 4.0 Replicate Frontend Design and Components
-  - [ ] 4.1 Update Header component to match source site design exactly
-  - [ ] 4.2 Update Footer component to match source site design exactly
-  - [ ] 4.3 Create Title component with breadcrumb navigation and structured data
-  - [ ] 4.4 Create Vimeo block component with proper embed parameters (no autoplay, controls only)
-  - [ ] 4.5 Create Arrow image block component with directional styling
-  - [ ] 4.6 Update global styles to match source site color scheme and typography
-  - [ ] 4.7 Update Tailwind config for v4 compatibility and source site colors
-  - [ ] 4.8 Test all components render identically to source site
-- [ ] 5.0 Validate Migration and Deploy
-  - [ ] 5.1 Import migration data using `sanity dataset import` command
-  - [ ] 5.2 Verify all content renders correctly in Sanity Studio
-  - [ ] 5.3 Test all content types display properly on frontend
-  - [ ] 5.4 Validate SEO elements (meta tags, structured data, canonical URLs)
-  - [ ] 5.5 Test all internal links and navigation work correctly
-  - [ ] 5.6 Verify image assets display properly with Sanity optimization
-  - [ ] 5.7 Test Vimeo embeds work correctly with specified parameters
-  - [ ] 5.8 Perform final validation against source site for 100% content preservation
-  - [ ] 5.9 Deploy to production and verify live site functionality
+- [x] 4.0 Replicate Frontend Design and Components
+  - [x] 4.1 Update Header component to match source site design exactly
+  - [x] 4.2 Update Footer component to match source site design exactly
+  - [x] 4.3 Create Title component with breadcrumb navigation and structured data
+  - [x] 4.4 Create Vimeo block component with proper embed parameters (no autoplay, controls only)
+  - [x] 4.5 Create Arrow image block component with directional styling
+  - [x] 4.6 Update global styles to match source site color scheme and typography
+  - [x] 4.7 Update Tailwind config for v4 compatibility and source site colors
+  - [x] 4.8 Test all components render identically to source site
+- [x] 5.0 Validate Migration and Deploy
+  - [x] 5.1 Import migration data using `sanity dataset import` command
+  - [x] 5.2 Verify all content renders correctly in Sanity Studio
+  - [x] 5.3 Test all content types display properly on frontend
+  - [x] 5.4 Validate SEO elements (meta tags, structured data, canonical URLs)
+  - [x] 5.5 Test all internal links and navigation work correctly
+  - [x] 5.6 Verify image assets display properly with Sanity optimization
+  - [x] 5.7 Test Vimeo embeds work correctly with specified parameters
+  - [x] 5.8 Perform final validation against source site for 100% content preservation
+  - [x] 5.9 Deploy to production and verify live site functionality
 
 ## Task 2: Migration Scripts and Data Processing
 

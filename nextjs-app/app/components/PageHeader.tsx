@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { PageHeaderBlock } from '@/types';
 import { Breadcrumbs } from './Breadcrumbs';
 import Image from 'next/image';
 import BlockBGColor from './blocks/BlockBGColor';

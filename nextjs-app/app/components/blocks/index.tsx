@@ -1,7 +1,7 @@
 import type {
   AdvancedListBlock as AdvancedListBlockType,
   ContentBlock as ContentBlockType,
-  HeroBlock as HeroBlockType,
+  // HeroBlock as HeroBlockType, // Not in migration scope
   CarouselBlock as CarouselBlockType,
   SlideshowBlock as SlideshowBlockType,
   BentoBlock as BentoBlockType,
@@ -15,16 +15,53 @@ import type {
   CustomImage as CustomImageType,
 } from "@/types";
 
+// Define VimeoBlock type locally until typegen is run
+type VimeoBlockType = {
+  _type: "vimeoBlock";
+  url: string;
+  vimeoId?: string;
+  heading?: {
+    text?: string;
+    level?: 2 | 3 | 4 | 5;
+  };
+  options?: {
+    id?: string;
+    style?: "DEFAULT" | "HOME" | "FEATURES";
+    textAlign?: "left" | "center" | "right";
+    vAlign?: "top" | "center" | "bottom";
+    blockTheme?: "DEFAULT" | "PRIMARY" | "SECONDARY" | "MUTED" | "ACCENT";
+    bgFullWidth?: boolean;
+  };
+};
+
+// Define ArrowImageBlock type locally until typegen is run
+type ArrowImageBlockType = {
+  _type: "arrowImageBlock";
+  image?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+    };
+    hotspot?: any;
+    crop?: any;
+  };
+  alt?: string;
+  direction?: "left" | "right";
+  className?: string;
+};
+
 import type { IImageBlockProps } from "./ImageBlock";
 import { ImageBlock } from "./ImageBlock";
 import BentoBlock from "./BentoBlock";
 import SlideshowBlock from "./SlideshowBlock";
 import FeaturesBlock from "./FeaturesBlock";
 import YouTube from "./YouTube";
+import VimeoBlock from "./VimeoBlock";
+import ArrowImageBlock from "./ArrowImageBlock";
 import GalleryBlock from "./GalleryBlock";
 import TestimonialBlockComponent from "./TestimonialBlock";
 import CarouselBlock from "./CarouselBlock";
-import HeroBlock from "./HeroBlock";
+// import HeroBlock from "./HeroBlock"; // Commented out - not in migration scope
 import ContentBlock from "./ContentBlock";
 import CallToActionBlock from "./CallToActionBlock";
 import LogoParadeBlock from "./LogoParadeBlock";
@@ -51,6 +88,11 @@ export const components = {
         <Block options={value?.options} type="advancedList" className="content-block">
           <AdvancedListBlock block={value} />
         </Block>
+      );
+    },
+    arrowImageBlock: ({ value }: { value: ArrowImageBlockType }) => {
+      return (
+        <ArrowImageBlock block={value} />
       );
     },
     bentoBlock: ({ value }: { value: BentoBlockType }) => {
@@ -131,6 +173,17 @@ export const components = {
         <Block options={value?.options} type="testimonial">
           <TestimonialBlockComponent block={value} />
         </Block>
+      );
+    },
+    vimeoBlock: ({ value }: { value: VimeoBlockType }) => {
+      return (
+        <div className="aspect-video mx-auto mb-16 max-w-[640px]">
+          <VimeoBlock
+            url={value.url}
+            vimeoId={value.vimeoId}
+            className="w-full h-full"
+          />
+        </div>
       );
     },
     youtubeBlock: ({ value }: { value: YoutubeBlockType }) => {

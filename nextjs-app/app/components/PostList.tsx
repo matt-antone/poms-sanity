@@ -48,9 +48,9 @@ export function PostList({ list, className, cards = true, loading = false }: IPo
   return (
     <div className={cn("grid gap-4 sm:grid-cols-2 lg:grid-cols-3", className)}>
       {list.map((item) => {
-        const sourceImage = item.coverImage;
+        const sourceImage = 'coverImage' in item ? item.coverImage : null;
         const imageUrl = sourceImage?.asset ? urlForImage({ source: sourceImage }) : null;
-        const excerpt = item.description ? toPlainText(item.description) : null;
+        const excerpt = 'description' in item && item.description ? toPlainText(item.description) : null;
 
         return (
           <Card key={item._id} className="flex flex-col">
@@ -97,7 +97,7 @@ const PostCard = ({ post }: { post: Post | Page }) => {
     <Card className="flex flex-col-reverse justify-end repsonsive-gap-sm">
       <CardHeader className="flex flex-col gap-2">
         <CardTitle>{post.title}</CardTitle>
-        {post.description && (
+        {'description' in post && post.description && (
           <CardDescription>
             {toPlainText(post.description)}
           </CardDescription>
@@ -105,14 +105,14 @@ const PostCard = ({ post }: { post: Post | Page }) => {
       </CardHeader>
       <CardContent>
         {(() => {
-          const sourceImageCard = post.coverImage;
+          const sourceImageCard = 'coverImage' in post ? post.coverImage : null;
           if (!sourceImageCard?.asset) return null;
           const imageUrlCard = urlForImage({ source: sourceImageCard, width: 400, height: 300 });
           if (!imageUrlCard) return null;
           return (
             <Image
               src={imageUrlCard}
-              alt={stegaClean(post.coverImage?.alt) || post.title || "Cover image"}
+              alt={stegaClean(('coverImage' in post && post.coverImage?.alt) || '') || post.title || "Cover image"}
               width={400}
               height={300}
               sizes="(max-width: 400px) 100vw, 400px"

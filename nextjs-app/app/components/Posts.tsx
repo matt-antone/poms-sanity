@@ -8,7 +8,7 @@ import OnBoarding from "@/app/components/Onboarding";
 import { toPlainText } from "@portabletext/react";
 
 const Post = ({ post }: { post: PostType }) => {
-  const { _id, title, slug, description, date } = post;
+  const { _id, title, slug, publishedAt, excerpt } = post;
 
   return (
     <article
@@ -16,19 +16,19 @@ const Post = ({ post }: { post: PostType }) => {
       className="flex max-w-xl flex-col items-start justify-between"
     >
       <div className="text-gray-500 text-sm">
-        <DateComponent dateString={date} />
+        <DateComponent dateString={publishedAt || ''} />
       </div>
 
       <h3 className="mt-3 text-2xl font-semibold">
         <Link
           className="hover:text-red-500 underline transition-colors"
-          href={`/posts/${slug}`}
+          href={`/posts/${slug?.current}`}
         >
           {title}
         </Link>
       </h3>
-      {description && <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
-        {toPlainText(description)}
+      {excerpt && <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600">
+        {excerpt}
       </p>}
     </article>
   );

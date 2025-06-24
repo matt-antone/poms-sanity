@@ -34,6 +34,11 @@
     @apply font-sans font-bold tracking-tight text-balance leading-none;
   }
 
+  /* Layout blocks */
+  .layout-block {
+    @apply py-8 md:py-12;
+  }
+
   /* @container (min-width: 0rem) {
     h1 {
       @apply text-h3;

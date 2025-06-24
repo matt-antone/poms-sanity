@@ -1,7 +1,13 @@
 import createImageUrlBuilder from "@sanity/image-url";
-import { Link } from "@/types/sanity.types";
 import { dataset, projectId, studioUrl } from "@/sanity/lib/api";
 import { createDataAttribute, CreateDataAttributeProps } from "next-sanity";
+
+type Link = {
+  linkType?: "href" | "page" | "post";
+  href?: string;
+  page?: string;
+  post?: string;
+};
 
 const imageBuilder = createImageUrlBuilder({
   projectId: projectId || "",
