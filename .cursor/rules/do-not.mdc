@@ -1,0 +1,10 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+# All of these rules are Manditory
+
+these rules are designed to help keep AI from going down the wrong road
+
+* do not update /memory-bank. this is old documention and can be used as reference.

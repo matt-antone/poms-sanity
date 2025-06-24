@@ -1,3 +1,247 @@
 {
-  "assets": []
+  "images": [
+    {
+      "_id": "965cab937dcac63d914005ea9f38a8736bf789f4",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/v1649459498/cybersecurity.jpg",
+      "fileName": "965cab937dcac63d914005ea9f38a8736bf789f4.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/965cab937dcac63d914005ea9f38a8736bf789f4.jpg",
+      "size": 159435,
+      "downloadedAt": "2025-06-24T00:18:57.495Z"
+    },
+    {
+      "_id": "6cac651763f3653516de05496ce3451333955191",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/c_fill,w_200/v1650993201/cybersecurity-image01.jpg",
+      "fileName": "6cac651763f3653516de05496ce3451333955191.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/6cac651763f3653516de05496ce3451333955191.jpg",
+      "size": 9874,
+      "downloadedAt": "2025-06-24T00:18:57.458Z"
+    },
+    {
+      "_id": "ecf0aa7c36b4eeae4df437b8fc78f7c7e7aeea9a",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/c_fill,w_200/v1650993198/cybersecurity-image02.jpg",
+      "fileName": "ecf0aa7c36b4eeae4df437b8fc78f7c7e7aeea9a.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/ecf0aa7c36b4eeae4df437b8fc78f7c7e7aeea9a.jpg",
+      "size": 13653,
+      "downloadedAt": "2025-06-24T00:18:57.448Z"
+    },
+    {
+      "_id": "6feb684dbff2cb4e6cb1a94d0ba03308d4aa57ce",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/c_fill,w_200/v1650993203/cybersecurity-image03.jpg",
+      "fileName": "6feb684dbff2cb4e6cb1a94d0ba03308d4aa57ce.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/6feb684dbff2cb4e6cb1a94d0ba03308d4aa57ce.jpg",
+      "size": 9394,
+      "downloadedAt": "2025-06-24T00:18:57.452Z"
+    },
+    {
+      "_id": "37b2c380ddde5ef98ea0d7ecfbfc42cd7a539a26",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/c_fill,w_200/v1650993202/cybersecurity-image04.jpg",
+      "fileName": "37b2c380ddde5ef98ea0d7ecfbfc42cd7a539a26.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/37b2c380ddde5ef98ea0d7ecfbfc42cd7a539a26.jpg",
+      "size": 10679,
+      "downloadedAt": "2025-06-24T00:18:57.459Z"
+    },
+    {
+      "_id": "a26b30d287c42ec81359aca447f3fe9da4d2d4c0",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/v1649459498/sexual-harassment.jpg",
+      "fileName": "a26b30d287c42ec81359aca447f3fe9da4d2d4c0.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/a26b30d287c42ec81359aca447f3fe9da4d2d4c0.jpg",
+      "size": 95867,
+      "downloadedAt": "2025-06-24T00:18:57.487Z"
+    },
+    {
+      "_id": "ae91c663ac474b262996480bc6cd82e2022a5847",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/c_fill,w_200/v1650993212/sexual-harassment-image01.jpg",
+      "fileName": "ae91c663ac474b262996480bc6cd82e2022a5847.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/ae91c663ac474b262996480bc6cd82e2022a5847.jpg",
+      "size": 8716,
+      "downloadedAt": "2025-06-24T00:18:57.480Z"
+    },
+    {
+      "_id": "0139f3d8c8dfa1ab82059a777cca21de98743fe1",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/c_fill,w_200/v1650993212/sexual-harassment-image02.jpg",
+      "fileName": "0139f3d8c8dfa1ab82059a777cca21de98743fe1.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/0139f3d8c8dfa1ab82059a777cca21de98743fe1.jpg",
+      "size": 11702,
+      "downloadedAt": "2025-06-24T00:18:57.475Z"
+    },
+    {
+      "_id": "a04f43753d830fc78ea2cdaec4057c9df27b5966",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/c_fill,w_200/v1650993211/sexual-harassment-image04.jpg",
+      "fileName": "a04f43753d830fc78ea2cdaec4057c9df27b5966.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/a04f43753d830fc78ea2cdaec4057c9df27b5966.jpg",
+      "size": 7516,
+      "downloadedAt": "2025-06-24T00:18:57.451Z"
+    },
+    {
+      "_id": "417310443005e4961a3464188b8912c3f219fe7f",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/v1649459498/public-entities.jpg",
+      "fileName": "417310443005e4961a3464188b8912c3f219fe7f.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/417310443005e4961a3464188b8912c3f219fe7f.jpg",
+      "size": 131633,
+      "downloadedAt": "2025-06-24T00:18:57.519Z"
+    },
+    {
+      "_id": "9b9e451aa045a16147d481a319f8423d3a667074",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/c_fill,w_200/v1650993205/public-entities-image01.jpg",
+      "fileName": "9b9e451aa045a16147d481a319f8423d3a667074.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/9b9e451aa045a16147d481a319f8423d3a667074.jpg",
+      "size": 8854,
+      "downloadedAt": "2025-06-24T00:18:57.479Z"
+    },
+    {
+      "_id": "85dbb890087f62ad5a2aba9f2d3e7d5c35899991",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/c_fill,w_200/v1650993209/public-entities-image02.jpg",
+      "fileName": "85dbb890087f62ad5a2aba9f2d3e7d5c35899991.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/85dbb890087f62ad5a2aba9f2d3e7d5c35899991.jpg",
+      "size": 10412,
+      "downloadedAt": "2025-06-24T00:18:57.458Z"
+    },
+    {
+      "_id": "80d6e520453adf98b8eeed75763b9d088cd0a06e",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/c_fill,w_200/v1650993208/public-entities-image03.jpg",
+      "fileName": "80d6e520453adf98b8eeed75763b9d088cd0a06e.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/80d6e520453adf98b8eeed75763b9d088cd0a06e.jpg",
+      "size": 12172,
+      "downloadedAt": "2025-06-24T00:18:57.481Z"
+    },
+    {
+      "_id": "4aeaac21fe04adf4f2cfabbf2c678d2861069f9c",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/v1637791740/global-insurance-graphic.jpg",
+      "fileName": "4aeaac21fe04adf4f2cfabbf2c678d2861069f9c.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/4aeaac21fe04adf4f2cfabbf2c678d2861069f9c.jpg",
+      "size": 68838,
+      "downloadedAt": "2025-06-24T00:18:57.495Z"
+    },
+    {
+      "_id": "ce38cc3387bce670f1d39c4b5a1d846e3b04d9e5",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/v1637791767/rising-risk-declining-renewals-graphic.jpg",
+      "fileName": "ce38cc3387bce670f1d39c4b5a1d846e3b04d9e5.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/ce38cc3387bce670f1d39c4b5a1d846e3b04d9e5.jpg",
+      "size": 56634,
+      "downloadedAt": "2025-06-24T00:18:57.504Z"
+    },
+    {
+      "_id": "e2fe649f2054cd8d22327eac303b77ebee1955a0",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/v1637791784/united-states-insurance-graphic.jpg",
+      "fileName": "e2fe649f2054cd8d22327eac303b77ebee1955a0.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/e2fe649f2054cd8d22327eac303b77ebee1955a0.jpg",
+      "size": 99536,
+      "downloadedAt": "2025-06-24T00:18:57.513Z"
+    },
+    {
+      "_id": "df84af9a897969cc2bd9c462cceb4249590f3ed6",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/v1637791817/technical-risks-tighter-terms-graphic.jpg",
+      "fileName": "df84af9a897969cc2bd9c462cceb4249590f3ed6.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/df84af9a897969cc2bd9c462cceb4249590f3ed6.jpg",
+      "size": 74487,
+      "downloadedAt": "2025-06-24T00:18:57.519Z"
+    },
+    {
+      "_id": "f35790545d927be14177adac753ffe6f44279007",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/v1637791877/transportation-graphic.jpg",
+      "fileName": "f35790545d927be14177adac753ffe6f44279007.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/f35790545d927be14177adac753ffe6f44279007.jpg",
+      "size": 77148,
+      "downloadedAt": "2025-06-24T00:18:57.480Z"
+    },
+    {
+      "_id": "f874213826b8aa6fdd697aaad687696174ae69a8",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/v1637791878/manufacturing-graphic.jpg",
+      "fileName": "f874213826b8aa6fdd697aaad687696174ae69a8.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/f874213826b8aa6fdd697aaad687696174ae69a8.jpg",
+      "size": 70464,
+      "downloadedAt": "2025-06-24T00:18:57.527Z"
+    },
+    {
+      "_id": "e722eb5529a1b3df4c3b31cdb613449b5970ca45",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/v1637791877/nonprofit-graphic.jpg",
+      "fileName": "e722eb5529a1b3df4c3b31cdb613449b5970ca45.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/e722eb5529a1b3df4c3b31cdb613449b5970ca45.jpg",
+      "size": 101450,
+      "downloadedAt": "2025-06-24T00:18:57.506Z"
+    },
+    {
+      "_id": "b5b7f9cf5c4ce8eb664f9e118bf6524554499b01",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/v1637791877/multifamily-rental-graphic.jpg",
+      "fileName": "b5b7f9cf5c4ce8eb664f9e118bf6524554499b01.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/b5b7f9cf5c4ce8eb664f9e118bf6524554499b01.jpg",
+      "size": 33126,
+      "downloadedAt": "2025-06-24T00:18:57.509Z"
+    },
+    {
+      "_id": "384d8636d90eaf10aa8fce4ae9e7ce9fa5967ce0",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/v1637791877/public-entity-graphic.jpg",
+      "fileName": "384d8636d90eaf10aa8fce4ae9e7ce9fa5967ce0.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/384d8636d90eaf10aa8fce4ae9e7ce9fa5967ce0.jpg",
+      "size": 76904,
+      "downloadedAt": "2025-06-24T00:18:57.480Z"
+    },
+    {
+      "_id": "21024336fb5d9b3228511bd66a8feaa3a1e5eb83",
+      "_type": "image",
+      "originalUrl": "https://www.mediashower.com/img/2245/121198814.jpg",
+      "fileName": "21024336fb5d9b3228511bd66a8feaa3a1e5eb83.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/21024336fb5d9b3228511bd66a8feaa3a1e5eb83.jpg",
+      "size": 928766,
+      "downloadedAt": "2025-06-24T00:18:57.546Z"
+    },
+    {
+      "_id": "f6d13869915c84cb4af6c2f16dc1ce16c7aa2ac7",
+      "_type": "image",
+      "originalUrl": "https://mediashower.com/img/6DAEC32E-F7C2-11E5-A795-AE8FC52E30FF/russia-95311_640.jpg",
+      "fileName": "f6d13869915c84cb4af6c2f16dc1ce16c7aa2ac7.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/f6d13869915c84cb4af6c2f16dc1ce16c7aa2ac7.jpg",
+      "size": 111628,
+      "downloadedAt": "2025-06-24T00:18:57.509Z"
+    },
+    {
+      "_id": "eab25ca5996818b0dddc0df631fe2e44b7f72d65",
+      "_type": "image",
+      "originalUrl": "https://res.cloudinary.com/pomsassoc/image/upload/v1598374945/Valley-200-graphic.jpg",
+      "fileName": "eab25ca5996818b0dddc0df631fe2e44b7f72d65.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/eab25ca5996818b0dddc0df631fe2e44b7f72d65.jpg",
+      "size": 88641,
+      "downloadedAt": "2025-06-24T00:18:57.530Z"
+    },
+    {
+      "_id": "d3e412ca1574dbf6e5d0ffb03c62b378cfe063c2",
+      "_type": "image",
+      "originalUrl": "https://mediashower.com/img/3DF3BEE8-8051-11E5-8898-FC30E7CACAF9/bigstock-Business-Meeting-2285037.jpg",
+      "fileName": "d3e412ca1574dbf6e5d0ffb03c62b378cfe063c2.jpg",
+      "filePath": "/Users/matthewantone/DevProjects/NextJS/poms-sanity/migration/images/d3e412ca1574dbf6e5d0ffb03c62b378cfe063c2.jpg",
+      "size": 406814,
+      "downloadedAt": "2025-06-24T00:18:57.596Z"
+    }
+  ],
+  "files": [],
+  "metadata": {
+    "totalAssets": 26,
+    "totalImages": 26,
+    "totalFiles": 0,
+    "failedDownloads": 0,
+    "processedFiles": 216,
+    "generatedAt": "2025-06-24T00:18:57.596Z"
+  }
 }

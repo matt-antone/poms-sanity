@@ -95,6 +95,70 @@ migration/
 - **Reference Format:** Internal references must use `_ref` and `_type: "reference"` format
 - **Metadata:** All documents must include `_id`, `_type`, `_createdAt`, `_updatedAt`, and `_rev` fields
 
+#### Sanity Import Best Practices
+
+Based on [Sanity's official import documentation](https://www.sanity.io/docs/content-lake/importing-data), the following best practices must be followed:
+
+**NDJSON Format Requirements:**
+
+- **Newline-Delimited JSON:** Each document must be on a separate line in the `data.ndjson` file
+- **Valid JSON per Line:** Each line must contain a complete, valid JSON object representing a Sanity document
+- **No Line Breaks:** JSON objects must not contain actual line breaks within the document
+
+**Asset Handling with \_sanityAsset:**
+
+- **Image Assets:** Use `_sanityAsset: "image@file:///absolute/path/to/image.jpg"` format
+- **File Assets:** Use `_sanityAsset: "file@file:///absolute/path/to/document.pdf"` format
+- **HTTP URLs:** Use `_sanityAsset: "image@https://example.com/image.jpg"` for remote assets
+- **Absolute Paths:** File URIs must be absolute paths, not relative paths
+- **Asset Type Prefix:** Always prefix with `image@` or `file@` to specify asset type
+
+**Import Command Usage:**
+
+```bash
+# Basic import
+sanity dataset import data.ndjson <target-dataset>
+
+# Import with options
+sanity dataset import data.ndjson <target-dataset> --replace --allow-failing-assets
+
+# Import compressed archive
+sanity dataset import staging.tar.gz production
+```
+
+**Import Options:**
+
+- **`--replace`:** Overwrite existing documents with same `_id`
+- **`--missing`:** Only create documents that don't exist
+- **`--allow-failing-assets`:** Continue import even if some assets are missing
+
+**Reference Handling:**
+
+- **Weak References:** During import, all references are automatically set to weak (`_weak: true`)
+- **Strong References:** After all documents are imported, weak references are automatically flipped to strong
+- **Import Order:** Documents can be imported in any order due to weak reference handling
+
+**Asset File Organization:**
+
+- **Images Directory:** Store all image files in `images/` directory
+- **Files Directory:** Store all file assets (PDFs, etc.) in `files/` directory
+- **File Naming:** Use asset `_id` as filename (without extension) for CLI compatibility
+- **Directory Structure:** Match the structure expected by Sanity CLI import
+
+**Pre-Import Considerations:**
+
+- **Webhook Disabling:** Disable any webhooks that could cause high traffic during import
+- **Rate Limiting:** Large imports may trigger API rate limits
+- **Asset Availability:** Ensure all referenced assets are accessible at the specified paths
+- **Dataset Backup:** Create backup of target dataset before import
+
+**Post-Import Validation:**
+
+- **Document Count:** Verify all expected documents were imported
+- **Asset References:** Check that all asset references resolve correctly
+- **Content Rendering:** Test that content displays properly in Sanity Studio
+- **Reference Integrity:** Verify all document references are working correctly
+
 #### Asset Handling
 
 - **Image Files:** All images must be downloaded and stored locally in `images/` directory
@@ -119,30 +183,40 @@ migration/
 
 ```javascript
 // migration/process-content.js
-// - Parse MDX files
-// - Convert to Sanity format
-// - Generate document IDs
-// - Create reference mappings
+// - Parse MDX files from source site
+// - Convert MDX content to Sanity document format
+// - Generate unique document IDs and references
+// - Map content types to Sanity schema types
 ```
 
-#### Asset Migration Script
+#### Asset Download Script
 
 ```javascript
-// migration/migrate-assets.js
-// - Download Cloudinary images
-// - Convert to local files
-// - Update image references
-// - Generate asset metadata
+// migration/download-assets.js
+// - Download all images from Cloudinary URLs
+// - Convert to local files with SHA1 hash naming
+// - Store files in images/ directory for CLI import
+// - Generate asset metadata for assets.json
 ```
 
-#### Data Export Script
+#### Migration Export Script
 
 ```javascript
-// migration/export-data.js
-// - Generate data.ndjson
-// - Create assets.json
-// - Validate data format
-// - Create migration folder structure
+// migration/export-migration.js
+// - Generate data.ndjson with all documents in CLI format
+// - Create assets.json with complete asset metadata
+// - Ensure proper reference mapping between documents
+// - Create migration folder structure for sanity dataset import
+```
+
+#### Migration Validation Script
+
+```javascript
+// migration/validate-migration.js
+// - Validate all JSON documents against Sanity schema
+// - Ensure all asset references use _sanityAsset format
+// - Verify all internal references exist
+// - Check data format compliance with Sanity CLI requirements
 ```
 
 ### Validation & Testing

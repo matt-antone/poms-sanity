@@ -53,14 +53,17 @@ describe("Migration Directory Structure", () => {
 
     it("should have valid assets.json format", () => {
       const assetsPath = path.join(migrationDir, "assets.json");
+      expect(fs.existsSync(assetsPath)).toBe(true);
+
       const content = fs.readFileSync(assetsPath, "utf8");
-
-      // Should be valid JSON
-      expect(() => JSON.parse(content)).not.toThrow();
-
       const assets = JSON.parse(content);
-      expect(assets).toHaveProperty("assets");
-      expect(Array.isArray(assets.assets)).toBe(true);
+
+      expect(assets).toHaveProperty("images");
+      expect(assets).toHaveProperty("files");
+      expect(assets).toHaveProperty("metadata");
+      expect(Array.isArray(assets.images)).toBe(true);
+      expect(Array.isArray(assets.files)).toBe(true);
+      expect(typeof assets.metadata).toBe("object");
     });
   });
 
