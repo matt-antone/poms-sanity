@@ -65,7 +65,7 @@
   - [x] 2.3 Create migration export script (`migration/export-migration.js`)
   - [x] 2.4 Create migration validation script (`migration/validate-migration.js`)
 - [ ] 3.0 Migrate Content and Assets
-  - [ ] 3.1 Migrate staff profiles (25+ files) - simplest content first
+  - [x] 3.1 Migrate staff profiles (25+ files) - simplest content first
   - [ ] 3.2 Migrate blog posts (12+ files) with all metadata and relationships
   - [ ] 3.3 Migrate static pages and service pages with content and metadata
   - [ ] 3.4 Migrate webinars (80+ files) with Vimeo block implementation
