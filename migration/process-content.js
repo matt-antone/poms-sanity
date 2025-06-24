@@ -81,6 +81,28 @@ function mdxToPortableText(mdxContent) {
     const trimmed = line.trim();
     if (!trimmed) continue;
 
+    // Handle Vimeo components
+    const vimeoMatch = trimmed.match(
+      /<Vimeo\s+url="([^"]+)"\s*\/?>|<Vimeo\s+url='([^']+)'\s*\/?>/
+    );
+    if (vimeoMatch) {
+      const vimeoId = vimeoMatch[1] || vimeoMatch[2];
+      const vimeoUrl = vimeoId.startsWith("http")
+        ? vimeoId
+        : `https://vimeo.com/${vimeoId}`;
+
+      blocks.push({
+        _type: "vimeoBlock",
+        url: vimeoUrl,
+        vimeoId: vimeoId,
+        aspectRatio: "16:9",
+        autoplay: false,
+        controls: true,
+        responsive: true,
+      });
+      continue;
+    }
+
     // Handle headers
     if (trimmed.startsWith("#")) {
       const level = trimmed.match(/^#+/)[0].length;

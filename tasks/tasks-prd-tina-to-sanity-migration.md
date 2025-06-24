@@ -64,15 +64,15 @@
   - [x] 2.2 Create asset download script (`migration/download-assets.js`)
   - [x] 2.3 Create migration export script (`migration/export-migration.js`)
   - [x] 2.4 Create migration validation script (`migration/validate-migration.js`)
-- [ ] 3.0 Migrate Content and Assets
+- [x] 3.0 Migrate Content and Assets
   - [x] 3.1 Migrate staff profiles (25+ files) - simplest content first
-  - [ ] 3.2 Migrate blog posts (12+ files) with all metadata and relationships
-  - [ ] 3.3 Migrate static pages and service pages with content and metadata
-  - [ ] 3.4 Migrate webinars (80+ files) with Vimeo block implementation
-  - [ ] 3.5 Download all Cloudinary images and convert to local files
-  - [ ] 3.6 Generate data.ndjson with all documents in proper Sanity format
-  - [ ] 3.7 Generate assets.json with complete asset metadata
-  - [ ] 3.8 Validate all document references and relationships are preserved
+  - [x] 3.2 Migrate blog posts (12+ files) with all metadata and relationships
+  - [x] 3.3 Migrate static pages and service pages with content and metadata
+  - [x] 3.4 Migrate webinars (80+ files) with Vimeo block implementation
+  - [x] 3.5 Download all Cloudinary images and convert to local files
+  - [x] 3.6 Generate data.ndjson with all documents in proper Sanity format
+  - [x] 3.7 Generate assets.json with complete asset metadata
+  - [x] 3.8 Validate all document references and relationships are preserved
 - [ ] 4.0 Replicate Frontend Design and Components
   - [ ] 4.1 Update Header component to match source site design exactly
   - [ ] 4.2 Update Footer component to match source site design exactly
